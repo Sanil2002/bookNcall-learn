@@ -4,7 +4,8 @@ import Events from "./pages/Events/Events"
 import Profile from "./pages/Profile/Profile"
 import Availability from "./pages/Availability/Availability"
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
-import Login from "./Pages/LandingPage/Login"
+import Login from "./pages/LoginPage/Login"
+import BookingPage from "./pages/BookingPage/BookingPage"
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/availability" element={<Availability />} />
+          <Route path="/user/:name" element={<BookingPage/>} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
