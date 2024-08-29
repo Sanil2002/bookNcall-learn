@@ -1,9 +1,24 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home/Home"
+import Events from "./pages/Events/Events"
+import Profile from "./pages/Profile/Profile"
+import Availability from "./pages/Availability/Availability"
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
+
 function App() {
 
 
   return (
     <>
-      <h1>Hello</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/availability" element={<Availability />} />
+          <Route path="/*" element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
